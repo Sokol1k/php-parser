@@ -1,0 +1,29 @@
+{
+    "require": {
+        "illuminate/database": "^7.3",
+        "predis/predis": "^1.1",
+        "symfony/dom-crawler": "^5.0",
+        "symfony/css-selector": "^5.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "illuminate/events": "^7.3",
+        "vlucas/phpdotenv": "^4.1",
+        "monolog/monolog": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "Migration\\": "migrations"
+        }
+    },
+    "scripts": {
+        "start": [
+            "php index.php"
+        ],
+        "migration": [
+            "php migrations/create_tables.php"
+        ],
+        "migration:rollback": [
+            "php migrations/destroy_tables.php"
+        ]
+    }
+}
